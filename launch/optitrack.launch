@@ -2,7 +2,7 @@
 
   <arg name="server" default="localhost"/>
 
- <remap from="/vrpn_client_node/RigidBody1/pose" to="/mavros/vision_pose/pose"/>
+ <remap from="/vrpn_client_node/bebop2_damaged/pose" to="/mavros/vision_pose/pose"/>
 
   <node pkg="vrpn_client_ros" type="vrpn_client_node" name="vrpn_client_node" output="screen">
     <rosparam subst_value="true">
