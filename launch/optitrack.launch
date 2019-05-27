@@ -1,12 +1,18 @@
+<!-- 
+After editing this file, run install-vrpn.sh
+TODO: override parameters via dronecontrol/config.py like MavrosFixture
+ -->
 <launch>
 
   <arg name="server" default="localhost"/>
 
- <remap from="/vrpn_client_node/bebop2_damaged/pose" to="/mavros/vision_pose/pose"/>
+  <remap from="/vrpn_client_node/tim/pose" to="/mavros/vision_pose/pose"/>
 
   <node pkg="vrpn_client_ros" type="vrpn_client_node" name="vrpn_client_node" output="screen">
     <rosparam subst_value="true">
-      server: 192.168.209.129
+      # server: 192.168.209.129 # OJF?
+      server: 192.168.209.128 # CyberZoo
+
       port: 3883
 
       update_frequency: 120.0
